@@ -1,0 +1,17 @@
+# ZSH, ZSH_DOTS
+
+ZSH_THEME="x-refined"
+
+plugins=(
+  docker
+  docker-compose
+  gcloud
+  git
+  fzf
+  zsh-completions
+  zsh-autosuggestions
+)
+
+source $ZSH/oh-my-zsh.sh
+source $ZSH_DOTS/path
+
