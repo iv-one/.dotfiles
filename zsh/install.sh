@@ -22,7 +22,7 @@ env git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git "$ZSH" || 
 git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone --depth=1 https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 
-ln -s $ZSH_DOTS/custom/themes/x-refined.zsh-theme ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/x-refined.zsh-theme
+# ln -s $ZSH_DOTS/custom/themes/x-refined.zsh-theme ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/x-refined.zsh-theme
 
 echo "export ZSH=\"$HOME/.oh-my-zsh\"" > ~/.zshrc
 echo "export ZSH_DOTS=\"$dirname\"" >> ~/.zshrc
