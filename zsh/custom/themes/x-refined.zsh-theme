@@ -98,7 +98,7 @@ kubernetes() {
 # Define prompts
 #
 setopt prompt_subst
-PROMPT="%(?.%F{magenta}.%F{red})❯%f  " # Display a red prompt char on failure
+PROMPT="%(?.%F{magenta}.%F{red})❯%f " # Display a red prompt char on failure
 RPROMPT='$(kubernetes)'    # Display username if connected via SSH
 
 # ------------------------------------------------------------------------------
