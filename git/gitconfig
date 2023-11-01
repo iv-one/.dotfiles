@@ -1,6 +1,6 @@
 [user]
 	name = Ivan Diachenko
-	email = ivan.dyachenko@gmail.com
+	email = ivan.diachenko@gmail.com
 
 [alias]
     cm = !git add --all . && git commit

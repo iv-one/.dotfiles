@@ -126,7 +126,7 @@ colors:
   # Default colors
   primary:
     background: "0xffffff"
-    foreground: "0x2d3748"
+    foreground: "0x000000"
 
     # Bright and dim foreground colors
     #
@@ -149,7 +149,7 @@ colors:
   normal:
     black: "0x000000"
     red: "0xd54e53"
-    green: "0x00B388" # '0xb9ca4a'
+    green: "0x00b388" # '0xb9ca4a'
     yellow: "0xD69E2E"
     blue: "0x3182ce"
     magenta: "0x5a67d8"
@@ -171,27 +171,23 @@ colors:
   #
   # If the dim colors are not set, they will be calculated automatically based
   # on the `normal` colors.
-  # dim:
-  #   black: "0xf2777a"
-  #   red: "0xf2777a"
-  #   green: "0x99cc99"
-  #   yellow: "0xffcc66"
-  #   blue: "0x6699cc"
-  #   magenta: "0xcc99cc"
-  #   cyan: "0x66cccc"
-  #   white: "0xdddddd"
+  dim:
+    black: "0xf2777a"
+    red: "0xf2777a"
+    green: "0x99cc99"
+    yellow: "0xffcc66"
+    blue: "0x6699cc"
+    magenta: "0xcc99cc"
+    cyan: "0x66cccc"
+    white: "0xdddddd"
+
   # Indexed Colors
   #
   # The indexed colors include all colors from 16 to 256.
   # When these are not set, they're filled with sensible defaults.
   #
-  indexed_colors:
-    # - { index: 106, color: "0x00B388" }
-    - { index: 108, color: "0xD6BCFA" }
-    - { index: 107, color: "0x4299E1" }
-    - { index: 106, color: "0x3182CE" }
-    - { index: 105, color: "0x5A67D8" }
-    - { index: 104, color: "0xEBF4FF" }
+  #indexed_colors:
+  #  - { index: 16, color: '0x000000' }
 
 # Visual Bell
 #

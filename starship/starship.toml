@@ -34,20 +34,20 @@ prompt_order = [
 [hostname]
 ssh_only = true
 prefix = ' '
-suffix = ' $BG[254]%F{13}'
-style = 'bg:13 fg:black bold'
+suffix = ' $BG[255]%F{105}'
+style = 'bg:105 fg:104 '
 trim_at = ''
 disabled = false
 
 [directory]
-prefix = '$BG[254] '
-suffix = '$BG[254] $BG[255]%F{254}'
-style = 'bg:254 fg:black'
+prefix = '$BG[256] '
+suffix = '$BG[256] '
+style = 'bg:white fg:black bold'
 
 [kubernetes]
 symbol = ' '
 style = 'bg:255 blue'
-disabled = false
+disabled = true
 suffix = '$BG[255] $reset_color%F{255}'
 prefix = ' %F{255}$BG[255]'
 
@@ -56,16 +56,16 @@ disabled = true
 
 [git_branch]
 symbol = ' '
-suffix = '$BG[255] '
-prefix = ' '
-style = 'bg:255 green'
+suffix = '$BG[106] '
+prefix = '$BG[106]%F{231} '
+style = 'bg:106 white'
 
 [git_commit]
 disabled = false
 commit_hash_length = 4
-style = 'bg:255 green'
+style = 'bg:106 white'
 prefix = ' '
-suffix = ' $reset_color%F{255}'
+suffix = ' $reset_color%F{106}'
 
 [git_status]
 style = 'green'
@@ -85,7 +85,7 @@ disabled = true
 
 [character]
 style_success = 'black'
-symbol = '%F{black}❯▸ '
+symbol = '%F{107}❯▸ '
 
 [nodejs]
 prefix = ' '
