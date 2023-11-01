@@ -11,6 +11,7 @@ function install_linux_fonts() {
 function install_darwin_fonts() {
   brew tap homebrew/cask-fonts
   brew install --cask font-hack-nerd-font
+  brew install --cask font-hasklug-nerd-font
 }
 
 unameout="$(uname -s)"

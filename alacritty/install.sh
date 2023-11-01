@@ -5,15 +5,7 @@ function install_linux_allacrity() {
 }
 
 function install_darwin_allacrity() {
-  tmp_dir=$(mktemp -d -t setup-XXXXXXXXXX)
-  pushd $tmp_dir
-  git clone --depth 1 git@github.com:alacritty/alacritty.git
-  cd alacritty
-  make app -j
-  cp -r target/release/osx/Alacritty.app /Applications/
-  popd
-  rm -rf $tmp_dir
-
+  mkdir -p "$HOME/.config/alacritty" 
   dirname="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
   src="$dirname/alacritty.yml"

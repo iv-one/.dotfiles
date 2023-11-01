@@ -19,7 +19,7 @@ function install_darwin() {
   ./tmux/install.sh
   ./zsh/install.sh
   ./vim/install.sh
-  ./nvim/install.sh
+  # ./nvim/install.sh
   ./alacritty/install.sh
   ./tig/install.sh
 }
