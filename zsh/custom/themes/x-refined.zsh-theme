@@ -33,8 +33,8 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable hg bzr git
 zstyle ':vcs_info:*:*' unstagedstr '!'
 zstyle ':vcs_info:*:*' stagedstr '+'
-zstyle ':vcs_info:*:*' formats "$FX[bold]%r$FX[no-bold]/%S" "%s/%F{yellow}%b%f" "%%u%c"
-zstyle ':vcs_info:*:*' actionformats "$FX[bold]%r$FX[no-bold]/%S" "%s/%F{yellow}%b%f" "%u%c (%a)"
+zstyle ':vcs_info:*:*' formats "$FX[bold]%r$FX[no-bold]/%S" "%F{yellow}  %b%f" "%%u%c"
+zstyle ':vcs_info:*:*' actionformats "$FX[bold]%r$FX[no-bold]/%S" "%F{yellow}=%b%f" "%u%c (%a)"
 zstyle ':vcs_info:*:*' nvcsformats "%~" "" ""
 
 inside_git() {
@@ -46,7 +46,7 @@ git_dirty() {
 }
 
 git_status() {
-  [[ -z $(git status -s) ]] || echo "%F{cyan}•%f"
+  [[ -z $(git status -s) ]] || echo " %F{yellow}•%f"
 }
 
 git_ahead() {
@@ -62,8 +62,10 @@ git_ahead() {
 # Display information about the current repository
 #
 repo_information() {
+    darker="234"
+    dark="236"
     if inside_git; then
-      echo "%F{blue}${vcs_info_msg_0_%%/.} %F{8}$vcs_info_msg_1_`git_dirty` `git_status` `git_ahead` $vcs_info_msg_2_%f"
+      echo "$BG[$darker]%F{blue}${vcs_info_msg_0_%%/.} %F{8}$BG[$dark]%F{$darker} $vcs_info_msg_1_`git_status` $reset_color%F{$dark} `git_ahead` $vcs_info_msg_2_%f"
     else
       echo "%F{blue}${vcs_info_msg_0_%%/.} %F{8}$vcs_info_msg_1_$vcs_info_msg_2_%f"
     fi
