@@ -4,12 +4,9 @@ dirname="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 unameOut="$(uname -s)"
 case "${unameOut}" in
-  Linux*)     color="colour214";;
-  Darwin*)    color="colour39";;
-  *)          color="colour202";;
+  Linux*)     sed -i 's|color_main="colour[0-9]*"|color_main="colour214"|g' "$dirname/tmux.conf";;
+  Darwin*)    sed -i '' 's|color_main="colour[0-9]*"|color_main="colour39"|g' "$dirname/tmux.conf";;
 esac
-
-sed -i '' "s|color_main=\"colour[0-9]*\"|color_main=\"$color\"|g" "$dirname/tmux.conf"
 
 src="$dirname/tmux.conf"
 dist="$HOME/.tmux.conf"
