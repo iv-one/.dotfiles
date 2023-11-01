@@ -16,3 +16,4 @@ source $ZSH/oh-my-zsh.sh
 source $ZSH_DOTS/path.sh
 source $ZSH_DOTS/conf.sh
 source $ZSH_DOTS/alias.sh
+source $ZSH_DOTS/nnn.sh
