@@ -12,12 +12,6 @@ if [ -d "/usr/local/opt/gettext/bin" ]; then
   export PATH="/usr/local/opt/gettext/bin:$PATH"
 fi
 
-# gcloud
-if [ -d "$HOME/google-cloud-sdk" ]; then
-  source "$HOME/google-cloud-sdk/path.zsh.inc"
-  source "$HOME/google-cloud-sdk/completion.zsh.inc"
-fi
-
 # nix
 if [ -d "$HOME/.nix-profile" ]; then
   source "$HOME/.nix-profile/etc/profile.d/nix.sh"
