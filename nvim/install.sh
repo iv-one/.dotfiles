@@ -10,8 +10,8 @@ function install_darwin_neovim() {
 
 unameout="$(uname -s)"
 case "${unameout}" in
-  Linux*)     install_linux_neovim;;
-  Darwin*)    install_darwin_neovim;;
+Linux*) install_linux_neovim ;;
+Darwin*) install_darwin_neovim ;;
 esac
 
 dirname="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -21,3 +21,5 @@ dist="$HOME/.config/nvim/init.vim"
 
 rm -f $dist
 ln -s $src $dist
+
+echo "✓ nvim"

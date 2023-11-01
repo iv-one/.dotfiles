@@ -1,19 +1,5 @@
 #!/bin/bash
 
-function install_linux_vim() {
-  nix-env -i vim
-}
-
-function install_darwin_vim() {
-  brew install vim
-}
-
-unameout="$(uname -s)"
-case "${unameout}" in
-  Linux*)     install_linux_vim;;
-  Darwin*)    install_darwin_vim;;
-esac
-
 dirname="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 echo 'Installing Dot Vim from '$dirname
@@ -32,7 +18,9 @@ catch
 endtry"
 
 IFS=''
-echo $VIMRC > ~/.vimrc
+echo $VIMRC >~/.vimrc
 unset IFS
 
-`$dirname/install.vim.sh`
+$($dirname/install.vim.sh)
+
+echo "✓ vim"

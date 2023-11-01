@@ -10,11 +10,13 @@ function install_linux_fonts() {
 
 function install_darwin_fonts() {
   brew tap homebrew/cask-fonts
-  brew cask install font-hasklig-nerd-font-mono
+  brew install --cask font-hack-nerd-font
 }
 
 unameout="$(uname -s)"
 case "${unameout}" in
-  Linux*)     install_linux_fonts;;
-  Darwin*)    install_darwin_fonts;;
+Linux*) install_linux_fonts ;;
+Darwin*) install_darwin_fonts ;;
 esac
+
+echo "✓ fonts"

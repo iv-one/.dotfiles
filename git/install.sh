@@ -12,8 +12,8 @@ function install_darwin_git {
 
 unameout="$(uname -s)"
 case "${unameout}" in
-  Linux*)     install_linux_git;;
-  Darwin*)    install_darwin_git;;
+Linux*) install_linux_git ;;
+Darwin*) install_darwin_git ;;
 esac
 
 dirname="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -23,3 +23,5 @@ dist="$HOME/.gitconfig"
 
 rm -f $dist
 ln -s $src $dist
+
+echo "✓ git"

@@ -1,8 +1,5 @@
 # ZSH, ZSH_DOTS
 
-# ZSH_THEME="x-refined"
-eval "$(starship init zsh)"
-
 plugins=(
   docker
   docker-compose

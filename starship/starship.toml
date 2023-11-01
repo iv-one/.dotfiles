@@ -1,53 +1,14 @@
-prompt_order = [
-    'username',
-    'hostname',
-    'directory',
-    'git_branch',
-    'git_commit',
-    'git_state',
-    'git_status',
-    'hg_branch',
-    'package',
-    'dotnet',
-    'golang',
-    'java',
-    'nodejs',
-    'php',
-    'python',
-    'ruby',
-    'rust',
-    'terraform',
-    'nix_shell',
-    'conda',
-    'memory_usage',
-    'aws',
-    'env_var',
-    'kubernetes',
-    'cmd_duration',
-    'line_break',
-    'jobs',
-    'battery',
-    'time',
-    'character',
-]
-
 [hostname]
 ssh_only = true
-prefix = ' '
-suffix = ' '
-style = 'bg:yellow fg:black '
-trim_at = ''
 disabled = false
-
-[directory]
-prefix = ' '
-suffix = ' '
-style = 'fg:white bold'
 
 [kubernetes]
 disabled = true
 
 [aws]
+disabled = true
+
+[gcloud]
 disabled = true
 
 [git_branch]
@@ -58,31 +19,14 @@ style = 'cyan'
 disabled = false
 commit_hash_length = 4
 style = 'cyan'
-prefix = ' '
-suffix = ' '
 
 [git_status]
 style = 'yellow'
 modified = ' • '
-prefix = ' '
-suffix = ' '
 stashed = ' '
-show_sync_count = true
-
-[rust]
-disabled = true
-symbol = ' ⚙️ '
+ahead = ' ⇡ $count '
+behind = ' ⇡ $count '
 
 [package]
 symbol = ' 📦 '
 disabled = true
-
-[character]
-style_success = 'blue'
-symbol = '▸ '
-
-[nodejs]
-prefix = ' '
-
-[time]
-prefix = ' '
