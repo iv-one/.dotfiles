@@ -15,8 +15,8 @@
 [core]
     editor = vim
     autocrlf = input
-	pager = delta --dark
-	excludesfile = /Users/haskell/.gitignore_global
+    pager = delta --dark
+    excludesfile = ~/.gitignore_global
 
 [push]
     default = matching
@@ -28,7 +28,7 @@
     prompt = true
 
 [mergetool "vimdiff"]
-    cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+    cmd = vim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 
 [difftool]
     prompt = false
@@ -51,11 +51,4 @@
     added = yellow
     changed = blue
     untracked = cyan
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[commit]
-	template = /Users/haskell/.stCommitMsg
+
