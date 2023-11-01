@@ -15,3 +15,7 @@ imap <c-x><c-j> <plug>(fzf-complete-file-ag)
 imap <c-x><c-l> <plug>(fzf-complete-line)
 
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git --ignore node_modules -g ""'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => ...
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
