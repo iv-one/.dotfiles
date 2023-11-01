@@ -5,9 +5,12 @@ curl \
 sudo \
 unzip \
 xz-utils \
-wget
+wget \
+zsh
 
 curl https://nixos.org/nix/install | sh
+
+. /home/jocker/.nix-profile/etc/profile.d/nix.sh
 
 nix-env -i ripgrep
 
@@ -19,3 +22,5 @@ nix-env -iA nixpkgs.ag
 
 nix-env -iA nixpkgs.glibcLocales
 export LOCALE_ARCHIVE="$(readlink ~/.nix-profile/lib/locale)/locale-archive"
+
+chsh -s $(which zsh)

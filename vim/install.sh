@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 function install_linux_vim() {
   nix-env -i vim
@@ -14,7 +13,6 @@ case "${unameout}" in
   Linux*)     install_linux_vim;;
   Darwin*)    install_darwin_vim;;
 esac
-
 
 dirname="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
