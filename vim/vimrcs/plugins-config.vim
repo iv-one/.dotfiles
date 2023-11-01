@@ -17,5 +17,9 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git --ignore node_modules -g ""'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => ...
+" => NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+map <leader>nn :NERDTreeToggle<cr>
+map <leader>nb :NERDTreeFromBookmark
+map <leader>nf :NERDTreeFind<cr>
