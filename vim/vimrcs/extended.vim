@@ -23,6 +23,7 @@ set guioptions-=L
 
 " Colorscheme
 set background=dark
+colorscheme hybrid
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Command mode related

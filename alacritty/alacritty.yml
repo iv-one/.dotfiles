@@ -82,15 +82,15 @@ tabspaces: 4
 font:
   # Normal (roman) font face
   normal:
-    family: "Hack Nerd Font"
+    family: "Hasklug Nerd Font Mono"
     # The `style` can be specified to pick a specific face.
-    style: Regular
+    style: Light
 
   # Italic font face
   bold:
-    family: "Hack Nerd Font"
+    family: "Hasklug Nerd Font Mono"
     # The `style` can be specified to pick a specific face.
-    style: Bold
+    style: Medium
 
   # Italic font face
   italic:
@@ -99,7 +99,7 @@ font:
     style: Italic
 
   # Point size
-  size: 12.0
+  size: 11.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -133,7 +133,7 @@ render_timer: false
 custom_cursor_colors: false
 
 # If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: true
+draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night Bright)
 colors:
@@ -156,7 +156,7 @@ colors:
   # These will only be used when the `custom_cursor_colors` field is set to `true`.
   cursor:
     text: '0x000000'
-    cursor: '0xffffff'
+    cursor: '0xcecece' #'0xffffff'
 
   # Normal colors
   normal:
@@ -167,7 +167,7 @@ colors:
     blue:    '0x7aa6da'
     magenta: '0xc397d8'
     cyan:    '0x70c0ba'
-    white:   '0xffffff'
+    white:   '0xcecece' # '0xffffff'
 
   # Bright colors
   bright:
@@ -178,7 +178,7 @@ colors:
     blue:    '0x7aa6da'
     magenta: '0xb77ee0'
     cyan:    '0x6bb9ce' # '0x54ced6'
-    white:   '0xffffff'
+    white:   '0xcecece' # '0xffffff'
 
   # Dim colors
   #
@@ -264,7 +264,7 @@ selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
-  save_to_clipboard: false
+  save_to_clipboard: true
 
 dynamic_title: true
 

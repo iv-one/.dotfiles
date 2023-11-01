@@ -8,6 +8,7 @@ cd $dirname
 
 VIMRC="set runtimepath+=$dirname
 
+source $dirname/vimrcs/plugins.vim
 source $dirname/vimrcs/basic.vim
 source $dirname/vimrcs/extended.vim
 
@@ -19,3 +20,5 @@ endtry"
 IFS=''
 echo $VIMRC > ~/.vimrc
 unset IFS
+
+`$dirname/install.vim.sh`
