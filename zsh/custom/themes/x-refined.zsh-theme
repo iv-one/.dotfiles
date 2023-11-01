@@ -1,25 +1,5 @@
 #!/usr/bin/env zsh
 
-# ------------------------------------------------------------------------------
-#
-# Pure - A minimal and beautiful theme for oh-my-zsh
-#
-# Based on the custom Zsh-prompt of the same name by Sindre Sorhus. A huge
-# thanks goes out to him for designing the fantastic Pure prompt in the first
-# place! I'd also like to thank Julien Nicoulaud for his "nicoulaj" theme from
-# which I've borrowed both some ideas and some actual code. You can find out
-# more about both of these fantastic two people here:
-#
-# Sindre Sorhus
-#   Github:   https://github.com/sindresorhus
-#   Twitter:  https://twitter.com/sindresorhus
-#
-# Julien Nicoulaud
-#   Github:   https://github.com/nicoulaj
-#   Twitter:  https://twitter.com/nicoulaj
-#
-# ------------------------------------------------------------------------------
-
 # Set required options
 #
 setopt prompt_subst
@@ -32,7 +12,6 @@ VCS_BRANCH_ICON=$'\uF126 ' # 
 VCS_COMMIT_ICON=$'\uE729 ' # 
 VCS_TAG_ICON=$'\uF02B'     # 
 VCS_STASH_ICON=$'\uF01C'   # 
-RUST_ICON=$'\uE7A8'        # 
 
 # Set vcs_info parameters
 #
@@ -110,10 +89,17 @@ precmd() {
   print -P "\n$(zssh)$(repo_information) %F{249}$(cmd_exec_time)%f"
 }
 
+kubernetes() {
+  local darker="234"
+  local dark="236"
+  echo "%F{$darker}$BG[$darker]%F{blue} ⎈ $(kubectl config current-context) %f%{$reset_color%}"
+}
+
 # Define prompts
 #
-PROMPT="%(?.%F{magenta}.%F{red})❯%f " # Display a red prompt char on failure
-RPROMPT=""    # Display username if connected via SSH
+setopt prompt_subst
+PROMPT="%(?.%F{magenta}.%F{red})❯%f  " # Display a red prompt char on failure
+RPROMPT='$(kubernetes)'    # Display username if connected via SSH
 
 # ------------------------------------------------------------------------------
 #
