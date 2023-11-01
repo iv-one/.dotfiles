@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if ! command -v zsh >/dev/null 2>&1; then
+  printf "Zsh is not installed! Please install zsh first!\n"
+  exit
+fi
+
 dirname="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 rm -rf ~/.oh-my-zsh 2> /dev/null
