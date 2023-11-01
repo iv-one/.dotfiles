@@ -1,1 +1,1 @@
-alias ywr='yarn workspaces run '
+alias y='yarn workspaces run '
