@@ -28,16 +28,18 @@ setopt prompt_subst
 #
 autoload -Uz vcs_info
 
-icons=(
-  branch        $'\uF126 '             # 
-)
+VCS_BRANCH_ICON=$'\uF126 ' # 
+VCS_COMMIT_ICON=$'\uE729 ' # 
+VCS_TAG_ICON=$'\uF02B'     # 
+VCS_STASH_ICON=$'\uF01C'   # 
+RUST_ICON=$'\uE7A8'        # 
 
 # Set vcs_info parameters
 #
 zstyle ':vcs_info:*' enable hg bzr git
 zstyle ':vcs_info:*:*' unstagedstr '!'
 zstyle ':vcs_info:*:*' stagedstr '+'
-zstyle ':vcs_info:*:*' formats "$FX[bold]%r$FX[no-bold]/%S" "%F{yellow} ${icons[branch]} %b%f" "%%u%c"
+zstyle ':vcs_info:*:*' formats "$FX[bold]%r$FX[no-bold]/%S" "%F{yellow} ${VCS_BRANCH_ICON} %b%f" "%%u%c"
 zstyle ':vcs_info:*:*' actionformats "$FX[bold]%r$FX[no-bold]/%S" "%F{yellow}=%b%f" "%u%c (%a)"
 zstyle ':vcs_info:*:*' nvcsformats "%~" "" ""
 
