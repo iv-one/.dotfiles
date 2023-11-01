@@ -15,5 +15,6 @@ rm -f $dist
 ln -s $src $dist
 
 git clone --depth 1 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+~/.tmux/plugins/tpm/bin/install_plugins
 
 echo "✓ tmux"
