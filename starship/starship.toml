@@ -1,91 +1,91 @@
 prompt_order = [
-    "username",
-    "hostname",
-    "directory",
-    "git_branch",
-    "git_commit",
-    "git_state",
-    "git_status",
-    "hg_branch",
-    "package",
-    "dotnet",
-    "golang",
-    "java",
-    "nodejs",
-    "php",
-    "python",
-    "ruby",
-    "rust",
-    "terraform",
-    "nix_shell",
-    "conda",
-    "memory_usage",
-    "aws",
-    "env_var",
-    "kubernetes",
-    "cmd_duration",
-    "line_break",
-    "jobs",
-    "battery",
-    "time",
-    "character",
+    'username',
+    'hostname',
+    'directory',
+    'git_branch',
+    'git_commit',
+    'git_state',
+    'git_status',
+    'hg_branch',
+    'package',
+    'dotnet',
+    'golang',
+    'java',
+    'nodejs',
+    'php',
+    'python',
+    'ruby',
+    'rust',
+    'terraform',
+    'nix_shell',
+    'conda',
+    'memory_usage',
+    'aws',
+    'env_var',
+    'kubernetes',
+    'cmd_duration',
+    'line_break',
+    'jobs',
+    'battery',
+    'time',
+    'character',
 ]
 
 [hostname]
 ssh_only = true
-prefix = " "
-suffix = " $BG[234]%F{218}"
-style = "bg:218 fg:236 bold"
-trim_at = ""
+prefix = ' '
+suffix = ' $BG[254]%F{13}'
+style = 'bg:13 fg:black bold'
+trim_at = ''
 disabled = false
 
 [directory]
-prefix = "$BG[234] "
-suffix = "$BG[234] $BG[236]%F{234}"
-style = "bg:234 fg:blue bold"
+prefix = '$BG[254] '
+suffix = '$BG[254] $BG[255]%F{254}'
+style = 'bg:254 fg:black'
 
 [kubernetes]
-symbol = " "
-style = "bg:234 blue"
+symbol = ' '
+style = 'bg:255 blue'
 disabled = false
-suffix = "$BG[234] $reset_color%F{234}"
-prefix = " %F{234}$BG[234]"
+suffix = '$BG[255] $reset_color%F{255}'
+prefix = ' %F{255}$BG[255]'
 
 [aws]
 disabled = true
 
 [git_branch]
-symbol = " "
-suffix = "$BG[236] "
-prefix = " "
-style = "bg:236 yellow"
+symbol = ' '
+suffix = '$BG[255] '
+prefix = ' '
+style = 'bg:255 green'
 
 [git_commit]
 disabled = false
 commit_hash_length = 4
-style = "bg:236 yellow"
-prefix = " "
-suffix = " $reset_color%F{236}"
+style = 'bg:255 green'
+prefix = ' '
+suffix = ' $reset_color%F{255}'
 
 [git_status]
-style = "yellow"
-modified = " • "
-prefix = " "
-suffix = " "
-stashed = " "
+style = 'green'
+modified = ' • '
+prefix = ' '
+suffix = ' '
+stashed = ' '
 show_sync_count = true
 
 [rust]
 disabled = true
-symbol = " ⚙️ "
+symbol = ' ⚙️ '
 
 [package]
-symbol = " 📦 "
+symbol = ' 📦 '
 disabled = true
 
 [character]
-style_success = "magenta"
-symbol = "%F{magenta}❯ "
+style_success = 'black'
+symbol = '%F{black}❯▸ '
 
 [nodejs]
-prefix = " "
+prefix = ' '
