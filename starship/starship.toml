@@ -3,7 +3,9 @@ ssh_only = true
 disabled = false
 
 [kubernetes]
-disabled = true
+disabled = false
+style = 'blue'
+format = '[$context \($namespace\)](green) '
 
 [aws]
 disabled = true
