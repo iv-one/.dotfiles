@@ -1,6 +1,6 @@
 [user]
-    name = Ivan Diachenko
-    email = ivan.dyachenko@gmail.com
+	name = Ivan Diachenko
+	email = ivan.dyachenko@gmail.com
 
 [alias]
     st = status
