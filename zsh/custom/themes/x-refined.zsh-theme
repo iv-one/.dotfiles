@@ -44,11 +44,11 @@ zstyle ':vcs_info:*:*' actionformats "$FX[bold]%r$FX[no-bold]/%S" "%F{yellow}=%b
 zstyle ':vcs_info:*:*' nvcsformats "%~" "" ""
 
 inside_git() {
-    command git rev-parse --is-inside-work-tree &>/dev/null || return
+  command git rev-parse --is-inside-work-tree &>/dev/null || return
 }
 
 git_dirty() {
-    command git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ] && echo " %F{red}•%f"
+  command git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ] && echo " %F{red}•%f"
 }
 
 git_status() {
@@ -56,53 +56,64 @@ git_status() {
 }
 
 git_ahead() {
-    local branch="$(git rev-parse --abbrev-ref HEAD)"
-    local count="$(git rev-list --count origin/$branch..HEAD 2&>/dev/null)"
-    if [ "$count" = '0' ]; then
-      return
-    else
-      echo "%F{cyan}$count⇡%f"
-    fi
+  local branch="$(git rev-parse --abbrev-ref HEAD)"
+  local count="$(git rev-list --count origin/$branch..HEAD 2&>/dev/null)"
+  if [ "$count" = '0' ]; then
+    return
+  else
+    echo "%F{cyan}$count⇡%f"
+  fi
+}
+
+zssh() {
+  if [ -z "$SSH_TTY" ]; then
+    return
+  else
+    local darker="234"
+    local dark="236"
+    local pink="218"
+    echo "$BG[$pink]%F{$dark}$FX[bold] %n@%m $FX[no-bold]$BG[$darker]%F{$pink} "
+  fi
 }
 
 # Display information about the current repository
 #
 repo_information() {
-    darker="234"
-    dark="236"
-    if inside_git; then
-      echo "$BG[$darker]%F{blue}${vcs_info_msg_0_%%/.} %F{8}$BG[$dark]%F{$darker} $vcs_info_msg_1_ `git_status` $reset_color%F{$dark} `git_ahead` $vcs_info_msg_2_%f"
-    else
-      echo "$BG[$darker]%F{blue}${vcs_info_msg_0_%%/.} %F{8}$vcs_info_msg_1_$reset_color%F{$darker}$vcs_info_msg_2_%f"
-    fi
+  local darker="234"
+  local dark="236"
+  if inside_git; then
+    echo "$BG[$darker]%F{blue}${vcs_info_msg_0_%%/.} %F{8}$BG[$dark]%F{$darker} $vcs_info_msg_1_ `git_status` $reset_color%F{$dark} `git_ahead` $vcs_info_msg_2_%f"
+  else
+    echo "$BG[$darker]%F{blue}${vcs_info_msg_0_%%/.} %F{8}$vcs_info_msg_1_$reset_color%F{$darker}$vcs_info_msg_2_%f"
+  fi
 }
 
 # Displays the exec time of the last command if set threshold was exceeded
 #
 cmd_exec_time() {
-    local stop=`date +%s`
-    local start=${cmd_timestamp:-$stop}
-    let local elapsed=$stop-$start
-    [ $elapsed -gt 5 ] && echo ${elapsed}s
+  local stop=`date +%s`
+  local start=${cmd_timestamp:-$stop}
+  let local elapsed=$stop-$start
+  [ $elapsed -gt 5 ] && echo ${elapsed}s
 }
 
 # Get the initial timestamp for cmd_exec_time
 #
 preexec() {
-    cmd_timestamp=`date +%s`
+  cmd_timestamp=`date +%s`
 }
 
 # Output additional information about paths, repos and exec time
 #
 precmd() {
-    vcs_info # Get version control info before we start outputting stuff
-    print -P "\n$(repo_information) %F{249}$(cmd_exec_time)%f"
+  vcs_info # Get version control info before we start outputting stuff
+  print -P "\n$(zssh)$(repo_information) %F{249}$(cmd_exec_time)%f"
 }
 
 # Define prompts
 #
 PROMPT="%(?.%F{magenta}.%F{red})❯%f " # Display a red prompt char on failure
-RPROMPT="%F{8}${SSH_TTY:+%n@%m}%f"    # Display username if connected via SSH
+RPROMPT=""    # Display username if connected via SSH
 
 # ------------------------------------------------------------------------------
 #
