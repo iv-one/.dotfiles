@@ -22,8 +22,12 @@ set guioptions-=l
 set guioptions-=L
 
 " Colorscheme
+if (has("termguicolors"))
+    " set termguicolors
+endif
+
 set background=dark
-colorscheme hybrid
+colorscheme gruvbox
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Command mode related
