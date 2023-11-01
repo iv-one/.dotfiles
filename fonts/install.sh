@@ -13,7 +13,6 @@ function install_darwin_fonts() {
   brew cask install font-hasklig-nerd-font-mono
 }
 
-
 unameout="$(uname -s)"
 case "${unameout}" in
   Linux*)     install_linux_fonts;;
