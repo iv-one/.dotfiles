@@ -1,10 +1,10 @@
 #!/bin/bash
 
-function install_allacrity_linux() {
+function install_linux_allacrity() {
   echo "Install alacritty from https://github.com/jwilm/alacritty"
 }
 
-function install_allacrity_darwin() {
+function install_darwin_allacrity() {
   brew cask install alacritty
   
   dirname="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -18,6 +18,6 @@ function install_allacrity_darwin() {
 
 unameout="$(uname -s)"
 case "${unameout}" in
-  Linux*)     install_allacrity_linux;;
-  Darwin*)    install_allacrity_darwin;;
+  Linux*)     install_linux_allacrity;;
+  Darwin*)    install_darwin_allacrity;;
 esac
