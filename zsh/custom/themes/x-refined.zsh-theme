@@ -49,7 +49,7 @@ git_dirty() {
 git_ahead() {
   if [  -d '.git' ]; then
     local branch="$(git rev-parse --abbrev-ref HEAD)"
-    local count="$(git rev-list --count origin/$branch..)"
+    local count="$(git rev-list --count $branch..origin/head)"
     if [ "$count" = '0' ]; then
       return
     else
