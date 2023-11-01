@@ -1,7 +1,14 @@
 #!/bin/bash
 
-nix-env -i tig
-nix-env -i diff-so-fancy
+sudo apt-get update && sudo apt-get -y install \
+curl \
+sudo \
+unzip \
+xz-utils \
+wget
+
+curl https://nixos.org/nix/install | sh
+
 nix-env -i ripgrep
 
 nix-env -iA nixpkgs.jq
