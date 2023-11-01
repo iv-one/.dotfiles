@@ -7,6 +7,7 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'w0ng/vim-hybrid'
 
+" Plugins
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
