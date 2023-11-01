@@ -1,0 +1,6 @@
+version: "3"
+services:
+  linux:
+    build: .
+    volumes:
+      - .:/home/jocker/.dotfiles
