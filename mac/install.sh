@@ -6,7 +6,6 @@ brew install \
   fzf \
   htop \
   ncdu \
-  # neovim \
   nnn \
   starship \
   the_silver_searcher \
@@ -14,7 +13,7 @@ brew install \
   vim \
   watch 
 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -y
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 cargo install git-delta
 
 echo "✓ mac"
