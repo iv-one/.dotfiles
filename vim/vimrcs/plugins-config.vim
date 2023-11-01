@@ -23,3 +23,10 @@ let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git --ignore node_modules -g "
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark
 map <leader>nf :NERDTreeFind<cr>
+
+let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\}
+let g:ale_fix_on_save = 1
