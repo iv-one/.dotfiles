@@ -1,0 +1,53 @@
+[user]
+name = Ivan Diachenko
+email = ivan@jalgos.com
+
+[alias]
+cm = !git add --all . && git commit
+ci = !git add --all . && git commit -m
+co = checkout
+master = !git checkout master
+p = fetch -p origin
+rmb = !"git branch | grep -v "master" | xargs git branch -D"
+br = for-each-ref --sort=committerdate refs --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+fza = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t -o git add"
+
+[core]
+editor = vim
+autocrlf = input
+pager = delta --dark
+excludesfile = ~/.gitignore_global
+
+[push]
+default = matching
+
+[merge]
+tool = vimdiff
+
+[mergetool]
+prompt = true
+
+[mergetool "vimdiff"]
+cmd = vim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+
+[difftool]
+prompt = false
+
+[diff]
+tool = vimdiff
+
+[color "branch"]
+current = yellow reverse
+local = yellow
+remote = green
+
+[color "diff"]
+meta = yellow bold
+frag = magenta bold
+old = red bold
+new = green bold
+
+[color "status"]
+added = yellow
+changed = blue
+untracked = cyan
