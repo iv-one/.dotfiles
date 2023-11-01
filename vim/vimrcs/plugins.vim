@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 " Themes
 Plug 'morhetz/gruvbox'
 Plug 'sonph/onehalf'
+Plug 'arcticicestudio/nord-vim'
 
 " Plugins
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }

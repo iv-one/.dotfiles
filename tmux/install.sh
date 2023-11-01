@@ -13,3 +13,5 @@ dist="$HOME/.tmux.conf"
 
 rm -f $dist
 ln -s $src $dist
+
+# git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

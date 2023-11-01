@@ -26,8 +26,7 @@ if (has("termguicolors"))
     " set termguicolors
 endif
 
-set background=dark
-colorscheme gruvbox
+colorscheme nord
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Command mode related
