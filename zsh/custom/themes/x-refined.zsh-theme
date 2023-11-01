@@ -71,7 +71,7 @@ repo_information() {
     darker="234"
     dark="236"
     if inside_git; then
-      echo "$BG[$darker]%F{blue}${vcs_info_msg_0_%%/.} %F{8}$BG[$dark]%F{$darker} $vcs_info_msg_1_`git_status` $reset_color%F{$dark} `git_ahead` $vcs_info_msg_2_%f"
+      echo "$BG[$darker]%F{blue}${vcs_info_msg_0_%%/.} %F{8}$BG[$dark]%F{$darker} $vcs_info_msg_1_ `git_status` $reset_color%F{$dark} `git_ahead` $vcs_info_msg_2_%f"
     else
       echo "$BG[$darker]%F{blue}${vcs_info_msg_0_%%/.} %F{8}$vcs_info_msg_1_$reset_color%F{$darker}$vcs_info_msg_2_%f"
     fi
