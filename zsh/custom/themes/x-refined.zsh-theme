@@ -56,7 +56,7 @@ git_status() {
 }
 
 git_ahead() {
-  local branch="$(git rev-parse --abbrev-ref HEAD)"
+  local branch="$(git rev-parse --abbrev-ref HEAD 2&>/dev/null)"
   local count="$(git rev-list --count origin/$branch..HEAD 2&>/dev/null)"
   if [ "$count" = '0' ]; then
     return
