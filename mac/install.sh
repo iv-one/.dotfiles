@@ -11,7 +11,8 @@ brew install \
   the_silver_searcher \
   tmux \
   vim \
-  watch 
+  watch \
+  zoxide
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 cargo install git-delta
