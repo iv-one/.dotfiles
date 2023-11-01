@@ -16,6 +16,8 @@ VCS_STASH_ICON=$'\uF01C'   # 
 # Set vcs_info parameters
 #
 zstyle ':vcs_info:*' enable hg bzr git
+zstyle ':vcs_info:*' check-for-changes true
+
 zstyle ':vcs_info:*:*' unstagedstr '!'
 zstyle ':vcs_info:*:*' stagedstr '+'
 zstyle ':vcs_info:*:*' formats "$FX[bold]%r$FX[no-bold]/%S" "%F{yellow} ${VCS_BRANCH_ICON} %b%f" "%%u%c"
