@@ -3,7 +3,6 @@
 	email = ivan.dyachenko@gmail.com
 
 [alias]
-    st = status
     cm = !git add --all . && git commit
     ci = !git add --all . && git commit -m
     co = checkout
