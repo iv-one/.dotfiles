@@ -14,7 +14,9 @@ sudo apt-get update && sudo apt-get -y install \
   wget \
   xz-utils \
   zsh \
-  tmux
+  tmux \
+  build-essential \
+  ncurses-dev
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install \

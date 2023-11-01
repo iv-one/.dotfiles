@@ -8,6 +8,7 @@ function install_linux() {
   ./tmux/install.sh
   ./zsh/install.sh
   ./vim/install.sh
+  ./tig/install.sh
 }
 
 function install_darwin() {
@@ -20,6 +21,7 @@ function install_darwin() {
   ./vim/install.sh
   ./nvim/install.sh
   ./alacritty/install.sh
+  ./tig/install.sh
 }
 
 unameout="$(uname -s)"
