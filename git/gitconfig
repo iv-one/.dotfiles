@@ -1,6 +1,6 @@
 [user]
 	name = Ivan Diachenko
-	email = ivan.diachenko@gmail.com
+	email = ivan@jalgos.com
 
 [alias]
     cm = !git add --all . && git commit
@@ -16,6 +16,7 @@
     editor = vim
     autocrlf = input
 	pager = delta --light
+	excludesfile = /Users/haskell/.gitignore_global
 
 [push]
     default = matching
@@ -50,3 +51,11 @@
     added = yellow
     changed = blue
     untracked = cyan
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/haskell/.stCommitMsg

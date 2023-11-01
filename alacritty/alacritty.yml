@@ -153,7 +153,7 @@ colors:
     yellow: "0xD69E2E"
     blue: "0x3182ce"
     magenta: "0x5a67d8"
-    cyan: "0x38b2ac"
+    cyan: "0x63B3ED"
     white: "0xffffff" # '0xffffff'
 
   # Bright colors
@@ -187,7 +187,7 @@ colors:
   #
   indexed_colors:
     # - { index: 106, color: "0x00B388" }
-    - { index: 108, color: "0xD6BCFA" }
+    - { index: 108, color: "0xFC8181" }
     - { index: 107, color: "0x4299E1" }
     - { index: 106, color: "0x3182CE" }
     - { index: 105, color: "0x5A67D8" }

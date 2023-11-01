@@ -89,3 +89,6 @@ symbol = '%F{107}❯▸ '
 
 [nodejs]
 prefix = ' '
+
+[time]
+prefix = ' '
