@@ -52,7 +52,7 @@ git_dirty() {
 }
 
 git_status() {
-  [[ -z $(git status -s) ]] || echo " %F{yellow}•%f"
+  [[ -z $(git status -s) ]] || echo "%F{yellow}•%f"
 }
 
 git_ahead() {
