@@ -92,7 +92,7 @@ precmd() {
 kubernetes() {
   local darker="234"
   local dark="236"
-  echo "%F{$darker}$BG[$darker]%F{blue} ⎈ $(kubectl config current-context) %f%{$reset_color%}"
+  echo "%F{$darker}$BG[$darker]%F{blue} ⎈ $(kubectl config current-context) %F{yellow} $(kubectl config view --minify --output 'jsonpath={..namespace}') %f%{$reset_color%}"
 }
 
 # Define prompts
