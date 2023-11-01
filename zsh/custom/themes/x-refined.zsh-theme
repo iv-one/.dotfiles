@@ -72,7 +72,7 @@ zssh() {
     local darker="234"
     local dark="236"
     local pink="218"
-    echo "$BG[$pink]%F{$dark}$FX[bold] %n@%m $FX[no-bold]$BG[$darker]%F{$pink} "
+    echo "$BG[$pink]%F{$dark}$FX[bold] %n@%m $FX[no-bold]$BG[$darker]%F{$pink} "
   fi
 }
 
