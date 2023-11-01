@@ -2,6 +2,9 @@
 ssh_only = true
 disabled = false
 
+[shell]
+style = 'cyan bold'
+
 [kubernetes]
 disabled = false
 style = 'blue'
