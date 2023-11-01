@@ -1,5 +1,21 @@
 #!/bin/bash
 
-git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git ~/.nerd-fonts
+function install_linux_fonts() {
+  mkdir -p ~/.fonts
+  pushd ~/.fonts
+  wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/Hasklig.zip
+  unzip Hasklig.zip
+  popd
+}
 
-~/.nerd-fonts/install.sh Hasklig
+function install_darwin_fonts() {
+  brew tap homebrew/cask-fonts
+  brew cask install font-hasklig-nerd-font-mono
+}
+
+
+unameout="$(uname -s)"
+case "${unameout}" in
+  Linux*)     install_linux_fonts;;
+  Darwin*)    install_darwin_fonts;;
+esac
