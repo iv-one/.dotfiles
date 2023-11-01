@@ -15,7 +15,7 @@ fza = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t -o
 [core]
 editor = vim
 autocrlf = input
-pager = delta --dark
+pager = delta --light
 excludesfile = ~/.gitignore_global
 
 [push]

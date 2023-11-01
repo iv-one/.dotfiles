@@ -32,3 +32,6 @@ behind = ' ⇣$count '
 [package]
 symbol = ' 📦 '
 disabled = true
+
+[battery]
+disabled = true
