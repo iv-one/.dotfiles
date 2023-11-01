@@ -40,7 +40,7 @@ zstyle ':vcs_info:*' enable hg bzr git
 zstyle ':vcs_info:*:*' unstagedstr '!'
 zstyle ':vcs_info:*:*' stagedstr '+'
 zstyle ':vcs_info:*:*' formats "$FX[bold]%r$FX[no-bold]/%S" "%F{yellow} ${VCS_BRANCH_ICON} %b%f" "%%u%c"
-zstyle ':vcs_info:*:*' actionformats "$FX[bold]%r$FX[no-bold]/%S" "%F{yellow}=%b%f" "%u%c (%a)"
+zstyle ':vcs_info:*:*' actionformats "$FX[bold]%r$FX[no-bold]/%S" "%F{yellow} ${VCS_COMMIT_ICON} %b%f" "%u%c (%a)"
 zstyle ':vcs_info:*:*' nvcsformats "%~" "" ""
 
 inside_git() {
