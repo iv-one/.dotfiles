@@ -31,6 +31,7 @@ Plug 'w0rp/ale'
 Plug 'jiangmiao/auto-pairs'
 Plug 'itchyny/lightline.vim'
 Plug 'maximbaz/lightline-ale'
+Plug 'metakirby5/codi.vim'
 
 if has('nvim')
 
