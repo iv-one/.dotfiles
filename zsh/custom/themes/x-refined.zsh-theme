@@ -37,33 +37,36 @@ zstyle ':vcs_info:*:*' formats "$FX[bold]%r$FX[no-bold]/%S" "%s/%F{yellow}%b%f" 
 zstyle ':vcs_info:*:*' actionformats "$FX[bold]%r$FX[no-bold]/%S" "%s/%F{yellow}%b%f" "%u%c (%a)"
 zstyle ':vcs_info:*:*' nvcsformats "%~" "" ""
 
-# Fastest possible way to check if repo is dirty
-#
-git_dirty() {
-    # Check if we're in a git repo
+inside_git() {
     command git rev-parse --is-inside-work-tree &>/dev/null || return
-    # Check if it's dirty
-    command git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ] && echo " %F{cyan}•%f"
+}
+
+git_dirty() {
+    command git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ] && echo " %F{red}•%f"
+}
+
+git_status() {
+  [[ -z $(git status -s) ]] || echo "%F{cyan}•%f"
 }
 
 git_ahead() {
-  if [  -d '.git' ]; then
     local branch="$(git rev-parse --abbrev-ref HEAD)"
-    local count="$(git rev-list --count $branch..origin/head)"
+    local count="$(git rev-list --count origin/$branch..HEAD)"
     if [ "$count" = '0' ]; then
       return
     else
       echo "%F{cyan}$count⇡%f"
     fi
-  else
-    return
-  fi
 }
 
 # Display information about the current repository
 #
 repo_information() {
-    echo "%F{blue}${vcs_info_msg_0_%%/.} %F{8}$vcs_info_msg_1_`git_dirty` `git_ahead` $vcs_info_msg_2_%f"
+    if inside_git; then
+      echo "%F{blue}${vcs_info_msg_0_%%/.} %F{8}$vcs_info_msg_1_`git_dirty` `git_status` `git_ahead` $vcs_info_msg_2_%f"
+    else
+      echo "%F{blue}${vcs_info_msg_0_%%/.} %F{8}$vcs_info_msg_1_$vcs_info_msg_2_%f"
+    fi
 }
 
 # Displays the exec time of the last command if set threshold was exceeded
