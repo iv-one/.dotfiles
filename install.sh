@@ -1,7 +1,13 @@
 #!/bin/bash
 
 function install_linux() {
-  echo "TBD"
+  ./linux/install.sh
+  ./fonts/install.sh
+  ./git/install.sh
+  ./starship/install.sh
+  ./tmux/install.sh
+  ./zsh/install.sh
+  ./vim/install.sh
 }
 
 function install_darwin() {

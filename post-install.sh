@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function install_linux() {
-
+  ./linux/post-install.sh
 }
 
 function install_darwin() {

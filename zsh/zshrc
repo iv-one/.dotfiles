@@ -4,7 +4,7 @@ plugins=(
   docker
   docker-compose
   git
-  fzf
+  # fzf
   zsh-completions
   zsh-autosuggestions
 )

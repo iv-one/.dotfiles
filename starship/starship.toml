@@ -24,8 +24,8 @@ style = 'cyan'
 style = 'yellow'
 modified = ' • '
 stashed = ' '
-ahead = ' ⇡ $count '
-behind = ' ⇡ $count '
+ahead = ' ⇡$count '
+behind = ' ⇣$count '
 
 [package]
 symbol = ' 📦 '

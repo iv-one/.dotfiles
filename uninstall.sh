@@ -1,7 +1,11 @@
 #!/bin/bash
 
 function install_linux() {
-  echo "TBD"
+  ./git/uninstall.sh
+  ./starship/uninstall.sh
+  ./tmux/uninstall.sh
+  ./zsh/uninstall.sh
+  ./vim/uninstall.sh
 }
 
 function install_darwin() {
