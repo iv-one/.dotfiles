@@ -171,9 +171,9 @@ set expandtab
 " Be smart when using tabs ;)
 set smarttab
 
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+" 1 tab == 2 spaces
+set shiftwidth=2
+set tabstop=2
 
 " Linebreak on 500 characters
 set lbr
@@ -183,6 +183,11 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+" Show tabs
+set list
+set listchars=tab:>-
+set textwidth=80
+set relativenumber
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
