@@ -123,6 +123,8 @@ set foldcolumn=1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+highlight Visual ctermfg=LightGrey ctermbg=0 guifg=LightGrey guibg=#434C5E
+
 " Enable syntax highlighting
 syntax enable
 

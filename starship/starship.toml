@@ -1,9 +1,12 @@
+[directory]
+style = 'fg:75 bold'
+
 [hostname]
 ssh_only = true
 disabled = false
 
 [shell]
-style = 'cyan bold'
+style = 'yellow bold'
 
 [kubernetes]
 disabled = false
@@ -18,12 +21,12 @@ disabled = true
 
 [git_branch]
 symbol = ' '
-style = 'cyan'
+style = 'yellow'
 
 [git_commit]
 disabled = false
 commit_hash_length = 4
-style = 'cyan'
+style = 'yellow'
 
 [git_status]
 style = 'yellow'
